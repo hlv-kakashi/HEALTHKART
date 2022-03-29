@@ -65,7 +65,7 @@ let e = new productObj(
   "MuscleBlaze Whey Gold Protein, 4.4 lb, Rich Milk Chocolate",
   4.5,
   1897,
-  62999,
+  6299,
   8669,
   6110
 );
@@ -214,6 +214,7 @@ let t = new productObj(
   "https://img8.hkrtcdn.com/12169/prd_1216867-MuscleBlaze-Biozyme-Whey-Protein-0.66-lb-Rich-Milk-Chocolate_c_m.jpg",
   "MuscleBlaze Biozyme Whey Protein, 0.073 lb, Rich Milk Chocolate",
   4.2,
+  120,
   129,
   299,
   120
@@ -223,6 +224,7 @@ let u = new productObj(
   "https://img6.hkrtcdn.com/15136/prd_1513585-Nakpro-Perform-Whey-Protein-Concentrate-2.2-lb-Chocolate_c_m.jpg",
   "Nakpro Perform Whey Protein Concentrate, 2.2 lb, Chocolate",
   4.5,
+  523,
   1233,
   1599,
   1222
@@ -232,6 +234,7 @@ let v = new productObj(
   "https://img4.hkrtcdn.com/14630/prd_1462993-XLR8-Flavoured-Whey-Protein-24-g-Protein-2-lb-Chocolate_c_m.jpg",
   "XLR8 Flavoured Whey Protein 24 g Protein, 2 lb, Chocolate",
   4.8,
+  4232,
   1777,
   1888,
   1700
@@ -242,8 +245,10 @@ let w = new productObj(
   "ON (Optimum Nutrition) Gold Standard 100% Whey Protein, 8.8 lb, Double Rich Chocolate",
   4.7,
   1900,
-  2000,
-  1890
+  12000,
+  15000,
+  11500
+
 );
 let x = new productObj(
   20,
@@ -251,8 +256,9 @@ let x = new productObj(
   "GNC Amp Gold Series 100% Whey Protein Advanced, 4.4 lb, Double Rich Chocolate",
   4.3,
   1500,
-  2000,
-  1390
+  5500,
+  7000,
+  5200
 );
 let y = new productObj(
   10,
@@ -260,8 +266,9 @@ let y = new productObj(
   "MuscleTech NitroTech Performance Series, 4 lb, Cookies & Cream",
   4.4,
   2900,
-  3000,
-  2890
+  5000,
+  6890,
+  4800
 );
 let z = new productObj(
   28,
@@ -269,8 +276,9 @@ let z = new productObj(
   "Myprotein Impact Whey Protein, 2.2 lb, Thandai",
   4.4,
   1500,
-  2000,
-  1430
+  2500,
+  3030,
+  2400
 );
 let array = [];
 array.push(
@@ -304,6 +312,7 @@ array.push(
 console.log(array);
 
 function displayData() {
+    document.querySelector("#container").innerHTML = "";
   array.map(function (elem) {
     let redbox = document.createElement("div");
     redbox.id = "redbox";
@@ -352,10 +361,29 @@ function displayData() {
     strPrice.innerText = `₹${elem.strPrice}`;
     let btn = document.createElement("button");
     btn.id = "btn";
-    
-    pricediv.append(price,strPrice);
-    div.append(upperbox, vegimg, img, name,ratingdiv,pricediv);
+    let buttontext = document.createElement("p");
+    buttontext.innerText = "Quick Buy"
+    buttontext.id = "buttontext";
+    let quickimg = document.createElement("img");
+    quickimg.src = "https://static1.hkrtcdn.com/hknext/static/media/pdp/thunder-buy.svg";
+    quickimg.id = "quickimg";
+    btn.append(quickimg,buttontext);
+    let elitediv = document.createElement("div");
+    elitediv.id = "elitediv"; 
+    let eliteimg = document.createElement("img");
+    eliteimg.id = "eliteimg";
+    eliteimg.src = "https://static1.hkrtcdn.com/hknext/static/media/loyalty/premium-logo-new.svg";
+    elitetext = document.createElement("p");
+    elitetext.id = "elitetext";
+    elitetext.innerText = "Premium Membership Price :";
+    let pmpPrice = document.createElement("p");
+    pmpPrice.innerText = `₹${elem.pmpPrice}`;
+    pmpPrice.id = "pmpPrice";
+    elitediv.append(eliteimg,elitetext,pmpPrice)
+    pricediv.append(price,strPrice,btn);
+    div.append(upperbox, vegimg, img, name,ratingdiv,pricediv,elitediv);
     document.querySelector("#container").append(div);
+
   });
 }
 displayData();
