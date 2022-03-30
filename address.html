@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payement</title>
+    ,<style>
+        body{
+            background-color: black ;
+            font-weight: bolder;
+        }
+        div{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin:auto;
+            margin-top: 50px;
+            width:450px;
+            height: auto;
+            padding: 1%;
+            background-color:#faf4f4fd;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        label,input{
+            margin:20px;
+            background-color:white;
+            border-radius: 2px;
+            padding: 5px;
+            width:300px;
+        }
+        h1{
+            font-size: 50px;
+            background-color: white;
+            text-align: center;
+        }
+        form{
+            margin:50px;
+        }#full,#mobile,#add,#landmark{
+            background-color: #c7f179fd;
+        }
+        h1{
+            background-color: bisque;
+            color: #f17909;
+        }
+        label{
+            color: hsl(357, 90%, 35%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Address Details</h1>
+    <div>
+        <form id="form">
+            
+            <label>Name</label><br>
+            <input id="full" type="text"/><br>
+            <label>Mobile</label><br>
+            <input id="mobile" type="number"/><br>
+            <label>Address</label><br>
+            <input id="add" type="text"/><br>
+            <label>LandMark</label><br>
+            <input id="landmark" type="text"/><br>
+            <input id="submit" type="submit"/>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    var arr=JSON.parse(localStorage.getItem("cardDetail"))||[];
+    document.querySelector("#form").addEventListener("submit",function(event){
+     event.preventDefault();
+     var name= document.querySelector("#full").value;
+     var cvv= document.querySelector("#mobile").value;
+     var expiry= document.querySelector("#add").value;
+     var name= document.querySelector("#landmark").value;
+     if(mobile==""&&address==""){
+         alert("Incoorect Details");
+     }else{
+        window.location.href="payment.html";
+     }
+    })
+</script>

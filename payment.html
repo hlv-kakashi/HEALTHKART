@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payement</title>
+    ,<style>
+        body{
+            background-color: black ;
+            font-weight: bolder;
+        }
+        div{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin:auto;
+            margin-top: 50px;
+            width:450px;
+            height: auto;
+            background-color:#e5f7ef;
+             box-shadow: rgba(50, 50, 93, 0.25)
+              0px 30px 60px -12px inset,
+               rgba(247, 230, 230, 0.3)
+                0px 18px 36px -18px inset;
+        }
+        label,input{
+            margin:20px;
+            background-color:white;
+            border-radius: 2px;
+            padding: 5px;
+            width:300px;
+        }
+        h1{
+            font-size: 50px;
+            background-color: white;
+            text-align: center;
+        }
+        form{
+            margin:50px;
+        }
+        label{
+            background-color: aquamarine;
+        }#cardnumber{
+            color: transparent;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <h1>Card Details</h1>
+    <div>
+        <form id="form">
+            
+            <label>Card Number</label><br>
+            <input id="cardnumber" type="number"/><br>
+            <label>Cvv</label><br>
+            <input id="cvv" type="number"/><br>
+            <label>Expiry Date</label><br>
+            <input id="expiry" type="date"/><br>
+            <label>Name on Card</label><br>
+            <input id="name" type="text"/><br>
+            <input id="submit" type="submit"/>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    var arr=JSON.parse(localStorage.getItem("cardDetail"))||[];
+    document.querySelector("#form").addEventListener("submit",function(event){
+     event.preventDefault();
+     var cardnumber= document.querySelector("#cardnumber").value;
+     var cvv= document.querySelector("#cvv").value;
+     var expiry= document.querySelector("#expiry").value;
+     var name= document.querySelector("#name").value;
+     if(cardnumber=="" && cvv==""){
+         alert("Incoorect Details");
+     }else{
+        window.location.href="thank.html";
+     }
+    })
+</script>
