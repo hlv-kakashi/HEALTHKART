@@ -311,9 +311,9 @@ array.push(
 );
 console.log(array);
 
-function displayData() {
+function displayData(data) {
     document.querySelector("#container").innerHTML = "";
-  array.map(function (elem) {
+  data.map(function (elem) {
     let redbox = document.createElement("div");
     redbox.id = "redbox";
     let vegimg = document.createElement("img");
@@ -386,4 +386,4 @@ function displayData() {
 
   });
 }
-displayData();
+displayData(array);
