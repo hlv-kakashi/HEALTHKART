@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(248, 248, 248);
+      font-family: Roboto, sans-serif;
+    }
+    #mycart {
+      height: 66.5px;
+      width: 765px;
+      background-color: white;
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+    #outercontainer {
+      display: flex;
+    }
+    #address {
+      height: 45px;
+      width: 362px;
+      background-color: white;
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-radius: 2px;
+    }
+    #coupon{
+        height: 50px;
+      width: 362px;
+      background-color: white;
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+    #pay{
+        height: 56px;
+      width: 362px;
+      background-color: rgb(223,70,34);
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-radius: 2px;
+        margin-top: 30px;
+    }
+    #amount{
+        height: 318px;
+      width: 362px;
+      background-color: white;
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-radius: 2px;
+        margin-top: 30px;
+    }
+    #heart{
+        height: 16px;
+        width: 16px;
+        margin-left: 430px;
+        margin-top: 25px;
+    }
+    #cart{
+        margin-left: 20px;
+        margin-top: 22px;
+        font-size:x-large;
+        font-weight: 540;
+    }
+    #wishlist{
+        margin-top: 25px;
+        margin-left: 10px;
+        
+    }
+    #map{
+        width: 16px;
+        height: 16px;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+    #delivery{
+        font-size: smaller;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    #bokaro{
+        font-size: smaller;
+        font-weight: bolder;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    #change{
+        font-size: smaller;
+        font-weight: bolder;
+        color: rgb(77,184,201);
+        margin-left: 80px;
+        margin-top: 15px;
+    }
+    #couponimg{
+        margin-top: 12px;
+        height: 24px;
+        width: 24px;
+        margin-left: 20px;
+    }
+    #applycoupon{
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    #arrow{
+        height: 24px;
+        width: 24px;
+        margin-left: 160px;
+        margin-top: 12px;
+    }
+    #totalpay{
+        color: white;
+        padding-top: 20px;
+        text-align: center;
+        font-weight: bolder;        
+    }
+    #summary{
+        margin-left: 20px;
+        padding-top: 20px;
+        font-weight: bolder;
+    }
+    #summarydiv{
+        background-color: rgb(241,255,255);
+        height: 60px;
+    }
+  </style>
+  <body>
+    <div id="outercontainer">
+      <div id="container1" style="margin-left: 100px;">
+        <div id="mycart" style="display: flex;">
+            <p id="cart">My Cart (4 Items)</p>
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/blue-wishlist.svg" id="heart" alt="">
+            <p id="wishlist">My Wishlist<p>
+        </div>
+      </div>
+      <div id="container2">
+        <div id="address" style="display: flex;">
+            <img id="map" src="https://static1.hkrtcdn.com/hknext/static/media/common/location-grey.svg" alt="">
+            <p id="delivery">Delivery to </p>
+            <p id="bokaro">827009, BOKARO</p>
+            <p id="change">Change</p>
+        </div>
+        <div id="coupon" style="display: flex;">
+            <img id="couponimg" src="https://static1.hkrtcdn.com/hknext/static/media/cart/discount.png" alt="">
+            <p id="applycoupon">Apply Coupon</p>
+            <img id="arrow" src="https://static1.hkrtcdn.com/hknext/static/media/cart/arrow-right.svg" alt="">
+        </div>
+        <div id="pay">
+            <p id="totalpay">Proceed to Pay</p>
+        </div>
+        <div id="amount">
+            <div id="summarydiv">
+                <p id="summary">Order Summary</p>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+
+            </div>
+            
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
