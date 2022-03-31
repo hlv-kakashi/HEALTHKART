@@ -333,6 +333,7 @@ function displayData(data) {
     redbox.append(off);
     let div = document.createElement("div");
     div.id = "innerdiv";
+   
     let img = document.createElement("img");
     img.src = elem.image;
     img.id = "productimg";
@@ -383,7 +384,14 @@ function displayData(data) {
     pricediv.append(price,strPrice,btn);
     div.append(upperbox, vegimg, img, name,ratingdiv,pricediv,elitediv);
     document.querySelector("#container").append(div);
-
+    div.addEventListener("click", function(){
+      descriptionData(elem);
+  })
   });
 }
 displayData(array);
+
+function descriptionData(elem){
+  console.log(elem)
+  localStorage.setItem("items", JSON.stringify(elem));
+}
