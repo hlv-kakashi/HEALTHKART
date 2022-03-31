@@ -1,0 +1,43 @@
+#fullDivNav {
+    height: 90px;
+    width: 99%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: Roboto, sans-serif;
+  
+  }
+
+#navbar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+  }
+
+#logo {
+    height:90px;
+    width: 230px;
+    margin-left: 60%;
+  
+}
+#titlebox {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content:space-evenly
+    
+  }
+  
+  .page_title {
+    color: rgb(97, 96, 96);
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .line{
+      margin-top: 24px;
+      height:1.5px;
+      width: 160px;
+      background: rgb(107, 107, 107);
+  }
