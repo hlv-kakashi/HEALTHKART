@@ -32,7 +32,7 @@ var addTocart = document.getElementById("addTocart");
 var cartItems = JSON.parse(localStorage.getItem("product")) || [];
 
 addTocart.addEventListener("click", function addtocart() {
-  // if(!Cartpage.includes(product1))
+
  cartItems.push(items)
   localStorage.setItem("product", JSON.stringify(cartItems));
 });

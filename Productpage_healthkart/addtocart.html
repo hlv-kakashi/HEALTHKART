@@ -138,6 +138,49 @@
       background-color: rgb(241, 255, 255);
       height: 60px;
     }
+    #image{
+        height: 99px;
+        width: 100px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    #maindiv{
+        height: 140px;
+        width: 765px;
+        background-color: white;
+        margin-left: 50px;
+        margin-top: 5px;
+        display: flex;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+    #flexdiv{
+        display: flex;
+    }
+    #priceanddiscount{
+        display: flex;
+    }
+    #cartprice{
+        margin-top: 0px;
+        margin-left: 5px;
+        font-weight: bolder;
+    }
+    #sprice{
+        margin-top: 0px;
+        margin-left: 5px;
+        color: grey;
+        font-size: smaller;
+    }
+    #discountoff{
+        margin-top: 0px;
+        margin-left: 5px;
+        color:rgb(105, 203, 135) ;
+        font-weight: bolder;
+        font-size: smaller;
+    }
+    #productTitle{
+        font-weight: bolder;
+    }
   </style>
   <body>
     <div id="fullDivNav">
@@ -249,7 +292,7 @@
           >
             Save extra 100
           </p>
-          <hr>
+          <hr />
           <div style="display: flex; justify-content: space-between">
             <p style="margin-left: 20px">Final Payable</p>
             <p style="margin-right: 20px; font-weight: bolder">100</p>
@@ -259,3 +302,41 @@
     </div>
   </body>
 </html>
+<script>
+    var cartarray = JSON.parse(localStorage.getItem("product"));
+    console.log(cartarray);
+  function displayCart(data) {
+       data.map(function(elem){
+           var container = document.querySelector("#container1");
+           var maindiv = document.createElement("div");
+           maindiv.id = "maindiv";
+           var innerdiv = document.createElement("div");
+           innerdiv.id = "flexdiv";
+           var rightdiv = document.createElement("div");
+           rightdiv.id = "rightdiv"
+           var image = document.createElement('img');
+           image.src = elem.image;
+           image.id = "image";
+           var title = document.createElement("p");
+           title.id = "productTitle"
+           title.innerText = elem.title;
+           var pricediv = document.createElement("div");
+           pricediv.id = "priceanddiscount"
+           var price = document.createElement("p");
+           price.id = "cartprice";
+           price.innerText = `₹${elem.price}`;
+           var sprice = document.createElement("s");
+           sprice.id = "sprice";
+           sprice.innerText = `₹${elem.strPrice}`;
+           var discount = document.createElement("p");
+           discount.id = "discountoff"
+           discount.innerText = `${elem.discount}% off`
+           pricediv.append(price,sprice,discount);
+           rightdiv.append(title,pricediv)
+           innerdiv.append(image);
+           maindiv.append(innerdiv,rightdiv);
+           container.append(maindiv);
+       })
+  }
+  displayCart(cartarray);
+</script>
