@@ -4,89 +4,219 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payement</title>
+    <title>payment</title>
+    <link rel="index.html">
     <style>
-        body{
-            background-color: #f5eeee ;
-            font-weight: bolder;
-        }
-        div{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            margin:auto;
-            margin-top: 50px;
-            width:450px;
-            height: auto;
-            background-color:#e5f7ef;
-             box-shadow: rgba(50, 50, 93, 0.25)
-              0px 30px 60px -12px inset,
-               rgba(247, 230, 230, 0.3)
-                0px 18px 36px -18px inset;
-        }
-        img{
-            margin-top:-100px;
-            width: 50%;
-            height: auto;
-            margin-left: -400px;
-        }
-        label,input{
-            margin:20px;
-            background-color:white;
-            border-radius: 2px;
-            padding: 5px;
-            width:300px;
-        }
-        h1{
-            font-size: 50px;
-            background-color: white;
-            text-align: center;
-        }
-        form{
-            margin:50px;
-        }
-        label{
-            background-color: aquamarine;
-        }#cardnumber{
-            color: transparent;
-            background-color: blanchedalmond;
-        }
-        #nac{
-            width: 100%;
-            height:50px;
-            background-color:white;
-            margin-top:-5px;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        }img{
-            width: 150px;
-            margin-top:0px;
-            margin-left: -1000px;
-        }
-      
+       #nac{
+           
+           display: flex;
+           width:100%;
+           height: 50px;
+           margin-left:00px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+       }
+       img{
+           width: 200px;
+           height: 50px;
+           margin-left: 50px;
+           background-color: white;
+           border-radius: 1px solid black;
+           
+
+       }
+       #fourt>img{
+           width: 0px;
+           height: 5px;
+       }
+       #add{
+           margin-left:300px;
+           width: 450px;
+           height: 500px;
+           background-color: white;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+       }
+       #add{
+           margin-top:100px;
+           margin-left:500px;
+
+       }
+       form{
+           margin-left:40px;
+       }
+       #btntag{
+           margin-left:-5px;
+           width:400px;
+           height:50px;
+           background-color: hsl(168,56%,30%);
+           border-radius: 2% 3% 5% 5%;
+           font-size: 15px;
+           color: white;
+           font-weight: bold;
+       }#first{
+           margin-left:100px;
+       }
+       #se{
+           margin-left:50px;
+       }#pay{
+           width: 100%;
+           height: 40px;
+           background-color: aliceblue;
+       }
+       #payo{
+           width:200px;
+           height: 40px;
+           background-color: white;
+           margin-top: 20px;
+       }
+       #si,#sip{
+           margin-left: 0px;
+           width: 200px;
+           height: 40px;
+           background-color: white;
+           color: rgb(70, 61, 61);
+           font-weight: bold;
+           word-spacing: 5px;
+           font-size: 16px;
+           border-right: 1px solid rgb(99, 93, 93);
+       }
+       #paymetd{
+           display: flex;
+       }
+
+       #d,#si,#sip{
+           width:140px;
+           height: 100px;
+       }#name,#cardnumber{
+           width: 250px;
+           height: 30px;
+       }#cvv{
+           width:50px;
+           height: 40px;
+       }
+       select{
+           width: 90px;
+           height: 50px;
+       }
+       h4{
+           margin-left: 40px;
+       }
+       #submit{
+           width: 250px;
+           height: 40px;
+           background-color: red;
+           color: white;
+           font-weight: bolder;
+           margin-left: 30px;
+       }
+       #img{
+           width:px;
+       }
+       #sip{
+           border-right: green 5px solid;
+       }
     </style>
 </head>
 <body>
     <div id="nac">
-        <img src="https://engineeringhealthkart.files.wordpress.com/2020/02/logonew-2.png?w=560">
+        <div id="first"> <img src="https://engineeringhealthkart.files.wordpress.com/2020/02/logonew-2.png?w=560">
+        </div>
+       
+       <div id="se"> <img src="https://static1.hkrtcdn.com/hknext/static/media/checkout/grey-tick.svg">
+    </div>
+       <div id="third">
+           <img src="https://static1.hkrtcdn.com/hknext/static/media/checkout/blue-tick.svg">
+       </div>
+   
+       <div id="fourth">
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/checkout/outline-tick.svg">
+        </div>
+         
     </div>
 
-   
-   
-    <div>
-        <form id="form">
-             <h3>Card Details</h3>
-            
-            <label>Card Number</label><br>
-            <input id="cardnumber" type="number"/><br>
-            <label>Cvv</label><br>
-            <input id="cvv" type="number"/><br>
-            <label>Expiry Date</label><br>
-            <input id="expiry" type="date"/><br>
-            <label>Name on Card</label><br>
-            <input id="name" type="text"/><br>
-            <input id="submit" type="submit"/>
-        </form>
+    <div id="pay">
+        <h3>Choose Payment Options</h3>
+        <hr>
     </div>
+    <div id="paymetd">
+         <div id="payo">
+             <div id="d"> 
+                  <button id="si">Simpl</button>
+            </div>
+
+         <button id="si">Pay Using UPI</button>
+        
+         <button id="sip">Debit card</button>
+      
+         <button id="si">Credit Card</button>
+        
+         <button id="si">Wallet</button>
+      
+         <button id="si">Internet Banking</button>
+      
+          <button id="si">EMI or Pay Later</button>
+        
+          <button id="si">Cash On Delivery</button>
+         
+    </div>
+    <div id="card">
+        <h4>Enter Card Details</h4>
+        <form>
+          <input type="text"id="name"placeholder="Card Holder Name">  
+          <br>
+            <input type="number"id="cardnumber"placeholder="Card Number"> 
+            <br>
+            <br>
+         <select id="mm"><option>Expiry MM</option>
+          
+              <option>1</option>
+                <option>2</option> 
+                 <option>3</option>
+                  <option>4</option>
+                    <option>5</option>
+                    
+                      <option>6</option>
+                        <option>7</option>
+                          <option>8</option>
+                            <option>9</option>
+                              <option>10</option>
+                                <option>11</option>
+                                  <option>12</option>
+                                    
+        </select>
+        
+          <select id="yy"><option>Expiry YY</option>
+          
+              <option>2021</option>
+                <option>2022</option> 
+                 <option>2023</option>
+                  <option>2024</option>
+                    <option>2025</option>
+                    
+                      <option>2026</option>
+                        <option>2027</option>
+                          <option>2028</option>
+                            <option>2029</option>
+                              <option>2030</option>
+                                <option>2031</option>
+                                  <option>2032</option>
+                                    
+        </select>
+        
+        <input type="text"id="cvv"placeholder="CVV">
+        </form>
+        <br>
+        <div id="im">
+            <img src="https://img1.hkrtcdn.com/1718/RuPay-Icon.png">
+            <img src="https://s3-ap-southeast-1.amazonaws.com/hkprod/13831/normal_1383075_o.png">
+           <img src="https://s3-ap-southeast-1.amazonaws.com/hkprod/13831/normal_1383073_o.png">
+           <img src="https://s3-ap-southeast-1.amazonaws.com/hkprod/payment_img/card/Maestro_logo.png">
+        </div>
+        <button id="submit">Pay Securely</button>
+    </div>
+    </div>
+   
+
+   
 </body>
 </html>
 <script>
