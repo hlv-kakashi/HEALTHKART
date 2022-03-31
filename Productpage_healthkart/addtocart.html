@@ -181,6 +181,51 @@
     #productTitle{
         font-weight: bolder;
     }
+    #plusminusdiv{
+        display: flex;
+    }
+    #btn1{
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        background-color: white;
+        text-align: center;
+        font-weight: bolder;
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        cursor: pointer;
+    }
+    #input{
+        height: 15px;
+        width: 20px;
+        text-align: center;
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-top: 3px;
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        ;
+    }
+    #btn2{
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        margin-left: 4px;
+        background-color: white;
+        text-align: center;
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        cursor: pointer;
+    }
+    #dustbin{
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
   </style>
   <body>
     <div id="fullDivNav">
@@ -227,6 +272,7 @@
           <p id="wishlist">My Wishlist</p>
           <p></p>
         </div>
+        <div id="container3"></div>
       </div>
       <div id="container2">
         <div id="address" style="display: flex">
@@ -261,11 +307,11 @@
           </div>
           <div style="display: flex; justify-content: space-between">
             <p style="margin-left: 20px">Total MRP</p>
-            <p style="margin-right: 20px; font-weight: bolder">100</p>
+            <p id="mrp" style="margin-right: 20px; font-weight: bolder" >100</p>
           </div>
           <div style="display: flex; justify-content: space-between">
             <p style="margin-left: 20px">Total Discounts</p>
-            <p
+            <p id="totaldiscount"
               style="
                 margin-right: 20px;
                 font-weight: bolder;
@@ -281,7 +327,7 @@
               Become a Member
             </p>
           </div>
-          <p
+          <p id="save"
             style="
               margin-top: -15px;
               font-size: smaller;
@@ -295,7 +341,7 @@
           <hr />
           <div style="display: flex; justify-content: space-between">
             <p style="margin-left: 20px">Final Payable</p>
-            <p style="margin-right: 20px; font-weight: bolder">100</p>
+            <p id="finalpayable" style="margin-right: 20px; font-weight: bolder">100</p>
           </div>
         </div>
       </div>
@@ -306,8 +352,9 @@
     var cartarray = JSON.parse(localStorage.getItem("product"));
     console.log(cartarray);
   function displayCart(data) {
-       data.map(function(elem){
-           var container = document.querySelector("#container1");
+      document.querySelector("#container3").innerHTML = "";
+       data.map(function(elem,index){
+           var container = document.querySelector("#container3");
            var maindiv = document.createElement("div");
            maindiv.id = "maindiv";
            var innerdiv = document.createElement("div");
@@ -331,12 +378,85 @@
            var discount = document.createElement("p");
            discount.id = "discountoff"
            discount.innerText = `${elem.discount}% off`
+           var plusminusdiv = document.createElement("div");
+           plusminusdiv.id = "plusminusdiv";
+           var input = document.createElement("input");
+           input.id = "input";
+           input.value = elem.quant;
+           var btn1 = document.createElement("button");
+           btn1.id = "btn1";
+           btn1.addEventListener("click", function(){
+               decrease(index);
+           })
+           var btn2 = document.createElement("button");
+           btn2.id = "btn2";
+           btn2.addEventListener("click", function(){
+               increase(index);
+           })
+           btn1.innerText = "-"
+           btn2.innerText = "+"
+           plusminusdiv.append(btn1,input,btn2);
            pricediv.append(price,sprice,discount);
-           rightdiv.append(title,pricediv)
+           rightdiv.append(title,pricediv,plusminusdiv);
            innerdiv.append(image);
-           maindiv.append(innerdiv,rightdiv);
+           var dustbin = document.createElement("img");
+           dustbin.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw50-I8VOda9TBM_rJv_ig5T-jPawcrW6v9Q&usqp=CAU";
+           dustbin.id = "dustbin";
+           dustbin.addEventListener("click", function(){
+            remove(index);
+           })
+           maindiv.append(innerdiv,rightdiv,dustbin);
            container.append(maindiv);
        })
   }
   displayCart(cartarray);
+
+  function decrease(index){
+      if (cartarray[index].quant >= 1){
+        cartarray[index].quant--;
+      localStorage.setItem("product", JSON.stringify(cartarray));
+      displayCart(cartarray);
+      total();
+      }
+      
+  }
+  function increase(index){
+      cartarray[index].quant++;
+      localStorage.setItem("product", JSON.stringify(cartarray));
+      displayCart(cartarray);
+      total();
+  }
+  function total(){
+    var total = cartarray.reduce(function(acc,elem){
+   return acc+ (elem.price*elem.quant)
+  
+
+},0)
+var total1 = cartarray.reduce(function(acc,elem){
+   return acc+ (elem.strPrice*elem.quant)
+},0)
+
+var total3 = cartarray.reduce(function(acc,elem){
+   return acc+ (elem.pmpPrice*elem.quant)
+},0)
+
+document.querySelector("#totaldiscount").innerText = `₹${total1-total}`;
+document.querySelector("#finalpayable").innerText = `₹${total}`
+document.querySelector("#mrp").innerText = `₹${total1}`;
+document.querySelector("#save").innerText = `₹${total-total3}`;
+  }
+  
+  total();
+
+  function arraylength(){
+      document.querySelector("#cart").innerText = `My Cart (0${cartarray.length} Items)`
+  }
+  arraylength();
+  function remove(index){
+cartarray.splice(index,1)
+localStorage.setItem("product",JSON.stringify(cartarray));
+displayCart(cartarray);
+total();
+arraylength();
+}
 </script>

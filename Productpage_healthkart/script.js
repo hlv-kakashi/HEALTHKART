@@ -393,6 +393,7 @@ displayData(array);
 
 function descriptionData(elem){
   console.log(elem)
+  elem.quant = 1;
   localStorage.setItem("items", JSON.stringify(elem));
   window.location.href = "prod_desc.html";
 }

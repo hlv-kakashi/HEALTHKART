@@ -35,6 +35,7 @@ addTocart.addEventListener("click", function addtocart() {
 
  cartItems.push(items)
   localStorage.setItem("product", JSON.stringify(cartItems));
+  window.location.href = "addtocart.html";
 });
 
 function displayData(data) {
