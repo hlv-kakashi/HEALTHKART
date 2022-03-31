@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        #Main_Container{
+           
+            height: 600px;
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2,2fr);
+            gap:10px;
+        }
+        #Cart_Item{
+           padding-top: 10px;
+            
+           
+        }
+        #Append_Bottle{
+          
+            height: 200px;
+            max-width: 90%;
+            margin: auto;
+            margin-top: 10px;
+            border-radius: 6px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            
+        }
+        #To_Append_Bottle_Img{
+            border: 2px solid black;
+            height: 180px;
+            margin-left: 10px;
+            width: 120px;
+            margin-top: 5px;
+            
+            
+        }
+        #Append_Bottle_Img_Data{
+           
+            height: 180px;
+           margin-left: 20px;
+            width: 350px;
+            margin-top: 5px;
+            font-family: sans-serif;
+            font-size: 18px;
+           
+
+
+        }
+        #Bottle_Plus_Minus{
+           
+            height: 40px;
+             margin-left: 10px;
+            width: 100px;
+            margin-top: 6px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+
+        }
+        #Bottle_Minus, #Bottle_Plus{
+             border:2px solid darkgrey;
+             height: 15px;
+             width: 15px;
+             border-radius: 50%;
+             margin: 5px;
+             margin-top: 10px;
+             display: flex;
+            
+        }
+        #Bottle_Count{
+            margin-top: 5px;
+            font-size: 25px;
+        }
+  
+        #Payment_Page{
+         
+            width: 70%;
+           
+        }
+        #My_Cart_Name, #Enter_Pin_Code,#Apply_Cupon,#Procced_to_pay{
+         
+            height: 55px;
+            width: 90%;
+            margin: auto;
+            margin-top: 10px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            border-radius: 8px;
+           
+        }
+        #Enter_Pin_Code{
+            display: flex;
+            justify-content: space-around;
+
+        }
+        #Enter_Pin_Code > div{
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+       
+        #Line{
+      
+         margin-top: 38px;
+         width: 70%;
+         margin-left: 0px;
+         margin-bottom: 20px;
+    
+        }
+        #Check{
+            height: 30px;
+            width: 100px;
+            border-radius: 6px;
+            background-color: rgb(16,187,190);
+            color: white;
+            font-size: 18px;
+            margin-left: 5px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            margin-right: 10px;
+
+        }
+        #Location_Logo, #Cupon_Logo ,#Left_Arrow{
+            height: 40px;
+            margin: 5px;
+         
+        }
+        #Apply_Cupon{
+         margin:30px 10px 0px 20px;
+         display: flex;
+        }
+
+        /* rgb(223,70,34) */
+     
+    
+        
+        #Procced_to_pay{
+            background-color: rgb(223,70,34) ;
+            text-align: center;
+            color: white;
+            font-size: 21px;
+            font-family: sans-serif;
+            padding-top: 1px;
+            padding-bottom: 7px;
+        
+        }
+        #Odrder_Summery{
+            
+            height: 280px;
+            width: 380px;
+            border-radius: 6px;
+            margin: 15px 10px  0px 20px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            
+        }
+       
+        #summry{
+            font-weight: bold;
+            font-family: sans-serif;
+            color: black;
+            font-size: 16px;
+            padding: 5px;
+        }
+        #Become_A_Member{
+           
+            font-size: 13px;
+            font-family: sans-serif;
+            color: blue;
+              margin: 5px;
+        }
+        #Top{
+            margin-top: 5px;
+            font-size: 17px;
+            font-family: sans-serif;
+        }
+        #Total_Price , #summry , #Total ,#Discount   ,#Loyality ,#Append_Bottle_Img_Data_Title,#Append_Bottle_Img_Data_Price,#Append_Bottle_Img_Data_Discount, #Final_Payable ,#Final_Payable{
+           
+            height: 30px;
+            width: 90%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 10px;
+            
+        }
+        #Total_Price_Append ,#Total_Daam , #Total_Discount, #Total_MRP ,#Final_Total{
+            margin-top: 5px;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: bold;
+         margin-right: 10px;
+
+        }
+        #Total_Discount,#Total_Daam{
+            font-weight: bold;
+        }
+        #Saving{
+            font-size: 13px;
+            font-family: sans-serif;
+            margin-top: 5px;
+            color:rgb(113,191,167);
+
+        }
+        #Location_Input{
+            height: 25px;
+            margin-top: 10PX;
+            border-radius: 5px;
+            width: 240px;
+            margin-right: 15px;
+        }
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+        #bold{
+            font-weight: bold;
+            margin: 15px;
+            font-family: sans-serif;
+            color: black;
+            font-size: 20px;
+           
+
+        }
+        #bolds{
+            font-weight: bold;
+            margin: 15px;
+            font-family: sans-serif;
+            color: black;
+            font-size: 20px;
+           padding-top: 15px;
+
+        }
+    </style>
+</head>
+<body>
+
+   <div id="Main_Container">
+       <div id="Cart_Item">
+                            <div id="My_Cart_Name">
+                                <!-- to enter name of my cart -->
+                                        <div id="bolds">My    Cart</div>
+                            </div>
+
+                             <!-- div To Append the images of the selted bottle -->
+                            <div id="Append_Bottle">
+
+                            <!-- the div is udes for the appending the imges of seleted bottle images  -->
+                                <div id="To_Append_Bottle_Img">
+
+                                </div>
+
+                                <!-- this div is for the appending all the data title price discount -->
+                                <div id="Append_Bottle_Img_Data">
+                                    <div  id="Append_Bottle_Img_Data_Title">Appended_Bottle_Img_Data_Title</div>
+                                    <div  id="Append_Bottle_Img_Data_Price">Appended_Bottle_Img_Data_Price</div>
+                                    <div  id="Append_Bottle_Img_Data_Discount">Appended_Bottle_Img_Data_Discount</div>
+                                    
+                                    
+                                    
+                                    
+                                    <div id="Bottle_Plus_Minus">
+                                          <div id="Bottle_Minus">-</div>
+                                          <div id="Bottle_Count">00</div>
+                                          <div id="Bottle_Plus">+</div>
+                                    </div>
+                                </div>
+
+                            </div>
+       </div>
+
+
+        <!-- Div To For All The Information About The Payement -->
+
+       <div id="Payment_Page">
+                            <div id="Enter_Pin_Code">
+                                <div><img id="Location_Logo" src="https://cdn-icons.flaticon.com/png/512/2838/premium/2838912.png?token=exp=1648640243~hmac=4446bcfcafb47b56621f9b028517136e" alt=""></div>
+                                <div id="Lin">
+                                    <input id="Location_Input">
+                                </div>
+                                
+                                    <button id="Check">Check</button> 
+                            </div>
+
+
+
+                            <!-- <the div is for the applying the cupon -->
+                            <div id="Apply_Cupon"> 
+                                <div ><img  id="Cupon_Logo"src="https://cdn-icons.flaticon.com/png/512/3263/premium/3263403.png?token=exp=1648641372~hmac=52fa684375cdb93be7b6cb66425aadd8" alt="Coupon LOgo">
+                                </div>
+                                <div><h2 id="bold">Apply Cuopon</h2> 
+                                   
+                                </div>
+                                <div style="margin-left:100px">  <img id="Cupon_Logo" id="Left_Arrow"src="https://cdn-icons-png.flaticon.com/128/271/271226.png" alt=""></div>
+
+                            </div>
+
+                            <div id="Procced_to_pay" >
+                                <p>Proceed To pay</p>
+
+                            </div>
+
+<!--                          this  div is fot Odrder_Summery the Total mrp Discount  andd all that stuff -->
+      
+   
+          <div id="Odrder_Summery">
+             
+            <div id="summry">
+                Order Summery
+
+              </div>
+
+              <div id="Total_Price">
+                   <div id="Top"> Total MRP </div> 
+
+
+
+                    <!-- To Append Total MRP  Of The Product -->
+                   <div id="Total_MRP"> Apppend the MRP 800 </div>
+
+              </div>
+              
+
+              <div id="Total">
+                    <div id="Top">Total</div>
+                   <!-- To Append Total Price Of The Product -->
+                    <div id="Total_Daam">Apppend the total  800000</div>
+
+              </div>
+              <div id="Discount">
+                  <div id="Top">Discount</div>
+                  <div id="Total_Discount">Apppend the Discount 28%</div>
+              </div>
+            
+
+              <div id="Loyality">
+                                          <div id="Top">Loyality</div>  
+    <div id="Become_A_Member"> Become A Member</div>
+              </div>
+
+              <div id="Final_Payable">
+                  <div  id="Top">Final Payble</div>
+                  <div id="Final_Total">Final_Total_Amount</div>
+
+              </div>
+              <div id="Saving">You will Save  ₹2,376  & Earn ₹88 HK Cash on this order </div>
+
+
+
+
+
+  <!-- order summry div end here  Below div-->
+          </div>
+ 
+
+
+
+
+
+
+       </div>
+
+   </div>
+
+    
+</body>
+</html>
+<script type="module"> 
+
+</script>
