@@ -394,4 +394,5 @@ displayData(array);
 function descriptionData(elem){
   console.log(elem)
   localStorage.setItem("items", JSON.stringify(elem));
+  window.location.href = "prod_desc.html";
 }
