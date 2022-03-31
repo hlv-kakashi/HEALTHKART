@@ -54,7 +54,7 @@ return `<div class="container">
                 <ul>
                     <!-- <li> -->
                       <div class="item-3" id="go_to_login_page">
-                        <p>My Accounts and Orders</p>
+                        <a href="login.html"><p>My Accounts and Orders</p></a>
                       </div>
                       <div class="hide">
                         <ul style="width:300px;height:300px";>
