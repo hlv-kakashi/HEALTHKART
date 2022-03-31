@@ -4,64 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payement</title>
-    ,<style>
-        body{
-            background-color: black ;
-            font-weight: bolder;
-        }
-        div{
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            margin:auto;
-            margin-top: 50px;
-            width:450px;
-            height: auto;
-            padding: 1%;
-            background-color:#faf4f4fd;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-        }
-        label,input{
-            margin:20px;
-            background-color:white;
-            border-radius: 2px;
-            padding: 5px;
-            width:300px;
-        }
-        h1{
-            font-size: 50px;
-            background-color: white;
-            text-align: center;
-        }
-        form{
-            margin:50px;
-        }#full,#mobile,#add,#landmark{
-            background-color: #c7f179fd;
-        }
-        h1{
-            background-color: bisque;
-            color: #f17909;
-        }
-        label{
-            color: hsl(357, 90%, 35%);
-        }
+    <title>Address</title>
+    <style>
+       #nac{
+           
+           display: flex;
+           width:100%;
+           height: 50px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+       }
+       img{
+           width: 200px;
+           height: 50px;
+           margin-left: 50px;
+           background-color: white;
+           border-radius: 1px solid black;
+           
+
+       }
+       #fourt>img{
+           width: 0px;
+           height: 5px;
+       }
+       #add{
+           margin-left:300px;
+           width: 450px;
+           height: 500px;
+           background-color: white;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+       }
+       #add{
+           margin-top:100px;
+           margin-left:500px;
+
+       }
+       form{
+           margin-left:40px;
+       }
+       #btntag{
+           margin-left:-5px;
+           width:400px;
+           height:50px;
+           background-color: hsl(168,56%,30%);
+           border-radius: 2% 3% 5% 5%;
+           font-size: 15px;
+           color: white;
+           font-weight: bold;
+       }
     </style>
 </head>
 <body>
-    <h1>Address Details</h1>
-    <div>
+    <div id="nac">
+        <div> <img src="https://engineeringhealthkart.files.wordpress.com/2020/02/logonew-2.png?w=560">
+        </div>
+       
+       <div id="se"> <img src="https://static1.hkrtcdn.com/hknext/static/media/checkout/grey-tick.svg">
+    </div>
+       <div id="third">
+           <img src="https://static1.hkrtcdn.com/hknext/static/media/checkout/blue-tick.svg">
+       </div>
+   
+       <div id="fourth">
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/checkout/outline-tick.svg">
+        </div>
+         
+    </div>
+
+    <div id="add">
+        <h3>Address Details</h3>
+        <hr>
         <form id="form">
-            
-            <label>Name</label><br>
-            <input id="full" type="text"/><br>
-            <label>Mobile</label><br>
-            <input id="mobile" type="number"/><br>
-            <label>Address</label><br>
-            <input id="add" type="text"/><br>
-            <label>LandMark</label><br>
-            <input id="landmark" type="text"/><br>
-            <input id="submit" type="submit"/>
+            <div id="n">
+
+                 <label>Name *</label>
+        <br>
+        <input type="text"id="name"></div>
+       
+         <br>
+         <div id="m">
+              <label>Mobile No *</label>
+        <br>
+        <input type="text"id="mobile">
+         <label>Alternate No *</label>
+        
+        <input type="text"id="alter">
+         </div>
+         <br>
+         <div id="ad">
+               <label>Address *</label>
+          <br>  
+        <input type="text"id="address">
+         </div>
+        
+        <br>
+       
+        <br>
+       <div id="la"> 
+            <label>Landmark</label>
+        <br>
+        <input type="text"id="landmark">
+         <label>Pincode </label>
+        
+        <input type="text"id="name"></div>
+    <br>
+    <br>
+        <button id="btntag">Save & Deliver</button>
         </form>
     </div>
 </body>
@@ -70,10 +117,10 @@
     var arr=JSON.parse(localStorage.getItem("cardDetail"))||[];
     document.querySelector("#form").addEventListener("submit",function(event){
      event.preventDefault();
-     var name= document.querySelector("#full").value;
-     var cvv= document.querySelector("#mobile").value;
-     var expiry= document.querySelector("#add").value;
-     var name= document.querySelector("#landmark").value;
+     var name= document.querySelector("#name").value;
+     var mobile= document.querySelector("#mobile").value;
+     var address= document.querySelector("#address").value;
+     var name1= document.querySelector("#landmark").value;
      if(mobile==""&&address==""){
          alert("Incoorect Details");
      }else{

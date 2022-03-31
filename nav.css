@@ -1,4 +1,20 @@
-#im{
-    width: 80%;
-    height: auto;
+#aut{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 1px solid black;
+}
+#auth{justify-content: flex-end;
+
+    display: flex;
+}
+#apple{
+    margin-left:-200px;
+}
+h3{
+    margin-left:-30px;
+    margin-top:-5px;
+}
+p{
+    margin-left:-100px;
+    margin-top:10px;
 }
