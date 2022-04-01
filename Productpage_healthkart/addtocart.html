@@ -415,11 +415,12 @@
   displayCart(cartarray);
 
   function decrease(index){
-      if (cartarray[index].quant >= 1){
+      if (cartarray[index].quant >= 2){
         cartarray[index].quant--;
       localStorage.setItem("product", JSON.stringify(cartarray));
       displayCart(cartarray);
       total();
+      
       }
       
   }
