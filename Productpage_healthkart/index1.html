@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Roboto, sans-serif;
+        background-color: rgb(248, 248, 248);
+      }
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 65%;
+        margin-left: 80px;
+        margin-top: 20px;
+      }
+      #productimg {
+        height: 200px;
+        width: 170px;
+        padding-left: 30px;
+        padding-top: 20px;
+      }
+      #innerdiv {
+        height: 500px;
+        width: 300px;
+        background-color: white;
+        border-radius: 6px;
+      }
+      #innerdiv:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        cursor: pointer;
+      }
+      #redbox {
+        width: 50px;
+        height: 21px;
+        background-color: rgb(227, 90, 90);
+        margin-top: 8px;
+        border-radius: 2px;
+        text-align: center;
+      }
+      #off {
+        color: white;
+        font-size: smaller;
+        padding-top: 3px;
+      }
+      #vegimg {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 160px;
+        margin-left: 15px;
+      }
+      #name {
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-weight: 550;
+        font-size: 500;
+      }
+      #heartimg {
+        margin-left: 270px;
+      }
+      #uppperbox {
+        display: flex;
+      }
+      #ratingdiv {
+        display: flex;
+
+        height: 25px;
+      }
+
+      #rating {
+        margin-left: 20px;
+        margin-top: 0px;
+      }
+      #ratingQ {
+        margin-left: 5px;
+        margin-top: 0px;
+      }
+      #pricediv {
+        display: flex;
+      }
+      #strPrice {
+        margin-top: 25px;
+        margin-left: 20px;
+        color: grey;
+      }
+      #price {
+        margin-left: 15px;
+      }
+      #btn {
+        margin-left: 40px;
+        margin-top: 10px;
+        display: flex;
+        width: 93px;
+        height: 35px;
+        border: 1px solid rgb(23, 143, 160);
+        background-color: white;
+        border-radius: 5px;
+        color: rgb(23, 143, 160);
+        cursor: pointer;
+      }
+      #buttontext {
+        margin-left: 15px;
+        margin-top: -0px;
+        font-weight: bolder;
+      }
+      #quickimg {
+        margin-top: 5px;
+      }
+      #elitediv {
+        display: flex;
+        width: 254.18px;
+        height: 17px;
+        background-color: rgb(234, 248, 248);
+        border: 1px solid rgb(23, 143, 160);
+        border-radius: 5px;
+        margin-left: 25px;
+      }
+      #eliteimg {
+        width: 15px;
+        height: 15px;
+      }
+      #elitetext {
+        color: rgb(23, 143, 160);
+        font-size: smaller;
+        margin-left: 12px;
+        margin-top: -0px;
+      }
+      #pmpPrice {
+        color: rgb(23, 143, 160);
+        font-size: smaller;
+        margin-top: -0px;
+        font-weight: bolder;
+        margin-left: 8px;
+      }
+      #bodyimg {
+        margin-left: 380px;
+      }
+      #branch {
+        font-size: smaller;
+        color: grey;
+        margin-left: 100px;
+        cursor: pointer;
+      }
+      #whey {
+        margin-left: 7px;
+        font-size: smaller;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+      #sort {
+        margin-left: 380px;
+        width: 230px;
+        height: 36px;
+        border-radius: 5px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      #containerfilter {
+        margin-left: 100px;
+      }
+      #reset {
+        margin-top: 20px;
+        margin-left: 80px;
+        text-decoration: none;
+        color: rgb(23, 143, 160);
+        font-weight: bolder;
+      }
+      #form {
+        width: 200px;
+        background-color: white;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-width: thin;
+      }
+      #form2 {
+        width: 200px;
+        background-color: white;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-width: thin;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex">
+      <p id="branch">Home / Sports Nutrition / Proteins /</p>
+      <p id="whey">Whey Proteins</p>
+    </div>
+
+    <img
+      src="https://img2.hkrtcdn.com/10922/bnr_1092171_o.jpg"
+      alt=""
+      id="bodyimg"
+    />
+    <div style="display: flex; margin-left: 380px">
+      <h1>Whey Protein</h1>
+      <img
+        src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/authenticity.svg"
+        alt=""
+        style="margin-left: 310px"
+      />
+      <h4 style="margin-left: 10px">Authenticity guaranteed</h4>
+      <img
+        src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/delivery_icon.svg"
+        alt=""
+        style="margin-left: 20px"
+      />
+      <h4 style="margin-left: 10px">Quick Delivery</h4>
+    </div>
+    <p style="margin-left: 380px; margin-right: 170px; font-size: smaller">
+      For your bodybuilding goals, you can completely rely on the whey protein.
+      Whey protein provides all the necessary protein and nutrients and helps in
+      improving great energy levels and allows you to achieve your bodybuilding
+      goals safely and effectively. It also benefits the overall health of the
+      body. At
+    </p>
+    <p style="color: rgb(23, 143, 160); margin-left: 380px; cursor: pointer">
+      Read more
+    </p>
+    <hr
+      style="width: 63%; margin-left: 380px; color: grey; font-weight: lighter"
+    />
+    <div style="display: flex">
+      <select name="" id="sort" onchange="sorting()">
+        <option value="pop">Sort by: Popularity</option>
+        <option value="pltoh">Price-- Low to High</option>
+        <option value="phtol">Price-- High to Low</option>
+        <option value="dltoh">Discount-- Low to High</option>
+        <option value="dhtol">Discount-- High to Low</option>
+        <option value="rhtol">Rating-- High to Low</option>
+      </select>
+      <img
+        style="height: 55px; width: 600px; margin-top: 20px; margin-left: 110px"
+        src="./Capture.PNG"
+        alt=""
+      />
+    </div>
+
+    <hr
+      style="width: 63%; margin-left: 380px; color: grey; font-weight: lighter"
+    />
+    <div style="display: flex">
+      <div id="containerfilter">
+        <div style="display: flex">
+          <h3>Filters</h3>
+          <a href="index1.html" id="reset">Reset All</a>
+        </div>
+        <div id="form">
+          <h3 style="margin-left: 20px">-- Discount</h3>
+          <form
+            style="display: flex; flex-direction: column; margin-left: 10px"
+          >
+            <div>
+              <input
+                type="radio"
+                id="html"
+                name="fav_language"
+                value="HTML"
+                onclick="filter1()"
+              />
+              <label for="html">11% and above</label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="radio"
+                id="css"
+                name="fav_language"
+                value="CSS"
+                onclick="filter2()"
+              />
+              <label for="css">15% and above</label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="radio"
+                id="javascript"
+                name="fav_language"
+                value="JavaScript"
+                onclick="filter3()"
+              />
+              <label for="javascript">20% and above</label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="radio"
+                id="javascript1"
+                name="fav_language"
+                value="JavaScript1"
+                onclick="filter4()"
+              />
+              <label for="javascript1">25% and above</label>
+            </div>
+          </form>
+        </div>
+        <div id="form2">
+          <h3 style="margin-left: 20px">-- price</h3>
+          <form
+            style="display: flex; flex-direction: column; margin-left: 10px"
+          >
+            <div>
+              <input
+                type="radio"
+                id="a"
+                value="a"
+                name="alpha"
+                onclick="filter5()"
+              />
+              <label for="a">1-1500</label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="radio"
+                id="b"
+                value="b"
+                name="alpha"
+                onclick="filter6()"
+              />
+              <label for="b">1500-4000</label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="radio"
+                id="c"
+                value="c"
+                name="alpha"
+                onclick="filter7()"
+              />
+              <label for="c">4000-8000</label>
+            </div>
+            <br />
+            <div>
+              <input
+                type="radio"
+                id="d"
+                value="d"
+                name="alpha"
+                onclick="filter8()"
+              />
+              <label for="d">8000-15000</label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="container"></div>
+    </div>
+  </body>
+</html>
+<script src="./script.js"></script>
+<script>
+  function sorting() {
+    var sort = document.querySelector("#sort").value;
+    console.log(sort);
+    if (sort == "pltoh") {
+      array.sort(function (a, b) {
+        return a.price - b.price;
+      });
+
+      displayData(array);
+    } else if (sort == "phtol") {
+      array.sort(function (a, b) {
+        return b.price - a.price;
+      });
+
+      displayData(array);
+    } else if (sort == "dltoh") {
+      array.sort(function (a, b) {
+        return a.discount - b.discount;
+      });
+
+      displayData(array);
+    } else if (sort == "dhtol") {
+      array.sort(function (a, b) {
+        return b.discount - a.discount;
+      });
+
+      displayData(array);
+    } else if (sort == "rhtol") {
+      array.sort(function (a, b) {
+        return b.rating - a.rating;
+      });
+
+      displayData(array);
+    } else if ((sort = "pop")) {
+      window.location.reload();
+    }
+  }
+
+  function filter1() {
+    array1 = array.filter((elem) => elem.discount > 10);
+    displayData(array1);
+  }
+  function filter2() {
+    array2 = array.filter((elem) => elem.discount > 14);
+    displayData(array2);
+  }
+  function filter3() {
+    array3 = array.filter((elem) => elem.discount > 19);
+    displayData(array3);
+  }
+  function filter4() {
+    array4 = array.filter((elem) => elem.discount > 24);
+    displayData(array4);
+  }
+  function filter5() {
+    array5 = array.filter((elem) => elem.price > 1 && elem.price <= 1500);
+    displayData(array5);
+  }
+  function filter6() {
+    array6 = array.filter((elem) => elem.price > 1500 && elem.price <= 4000);
+    displayData(array6);
+  }
+  function filter7() {
+    array7 = array.filter((elem) => elem.price > 4000 && elem.price <= 8000);
+    displayData(array7);
+  }
+  function filter8() {
+    array8 = array.filter((elem) => elem.price > 8000 && elem.price <= 15000);
+    displayData(array8);
+  }
+</script>
