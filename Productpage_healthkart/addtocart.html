@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="addtocart.css" />
+  </head>
+  <style>
+    body {
+      background-color: rgb(248, 248, 248);
+      font-family: Roboto, sans-serif;
+    }
+    #mycart {
+      height: 66.5px;
+      width: 765px;
+      background-color: white;
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+    #outercontainer {
+      display: flex;
+    }
+    #address {
+      height: 45px;
+      width: 362px;
+      background-color: white;
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 2px;
+    }
+    #coupon {
+      height: 50px;
+      width: 362px;
+      background-color: white;
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+    #pay {
+      height: 56px;
+      width: 362px;
+      background-color: rgb(223, 70, 34);
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 2px;
+      margin-top: 30px;
+    }
+    #amount {
+      height: 318px;
+      width: 362px;
+      background-color: white;
+      margin-top: 100px;
+      margin-left: 50px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 2px;
+      margin-top: 30px;
+    }
+    #heart {
+      height: 16px;
+      width: 16px;
+      margin-left: 430px;
+      margin-top: 25px;
+    }
+    #cart {
+      margin-left: 20px;
+      margin-top: 22px;
+      font-size: x-large;
+      font-weight: 540;
+    }
+    #wishlist {
+      margin-top: 25px;
+      margin-left: 10px;
+    }
+    #map {
+      width: 16px;
+      height: 16px;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+    #delivery {
+      font-size: smaller;
+      margin-left: 10px;
+      margin-top: 15px;
+    }
+    #bokaro {
+      font-size: smaller;
+      font-weight: bolder;
+      margin-left: 10px;
+      margin-top: 15px;
+    }
+    #change {
+      font-size: smaller;
+      font-weight: bolder;
+      color: rgb(77, 184, 201);
+      margin-left: 80px;
+      margin-top: 15px;
+    }
+    #couponimg {
+      margin-top: 12px;
+      height: 24px;
+      width: 24px;
+      margin-left: 20px;
+    }
+    #applycoupon {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+    #arrow {
+      height: 24px;
+      width: 24px;
+      margin-left: 160px;
+      margin-top: 12px;
+    }
+    #totalpay {
+      color: white;
+      padding-top: 20px;
+      text-align: center;
+      font-weight: bolder;
+    }
+    #summary {
+      margin-left: 20px;
+      padding-top: 20px;
+      font-weight: bolder;
+    }
+    #summarydiv {
+      background-color: rgb(241, 255, 255);
+      height: 60px;
+    }
+    #image{
+        height: 99px;
+        width: 100px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    #maindiv{
+        height: 140px;
+        width: 765px;
+        background-color: white;
+        margin-left: 50px;
+        margin-top: 5px;
+        display: flex;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+    #flexdiv{
+        display: flex;
+    }
+    #priceanddiscount{
+        display: flex;
+    }
+    #cartprice{
+        margin-top: 0px;
+        margin-left: 5px;
+        font-weight: bolder;
+    }
+    #sprice{
+        margin-top: 0px;
+        margin-left: 5px;
+        color: grey;
+        font-size: smaller;
+    }
+    #discountoff{
+        margin-top: 0px;
+        margin-left: 5px;
+        color:rgb(105, 203, 135) ;
+        font-weight: bolder;
+        font-size: smaller;
+    }
+    #productTitle{
+        font-weight: bolder;
+    }
+    #plusminusdiv{
+        display: flex;
+    }
+    #btn1{
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        background-color: white;
+        text-align: center;
+        font-weight: bolder;
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        cursor: pointer;
+    }
+    #input{
+        height: 15px;
+        width: 20px;
+        text-align: center;
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-top: 3px;
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        ;
+    }
+    #btn2{
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        margin-left: 4px;
+        background-color: white;
+        text-align: center;
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        cursor: pointer;
+    }
+    #dustbin{
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+        margin-left: 240px;
+        margin-right: 40px;
+        cursor: pointer;
+        
+    }
+  </style>
+  <body>
+    <div id="fullDivNav">
+      <div id="navbar">
+        <div id="mainlogo ">
+          <img
+            id="logo"
+            src="https://affiliate.cubber.in/images/partner_logo/health_kart.jpg"
+          />
+        </div>
+
+        <div id="titlebox">
+          <img
+            src="https://img5.hkrtcdn.com/react/static/media/checkout/blue-tick.svg"
+            alt=""
+          />
+          <p class="page_title">CART</p>
+          <div class="line"></div>
+
+          <img
+            src="https://img5.hkrtcdn.com/react/static/media/checkout/outline-tick.svg"
+            alt=""
+          />
+          <p class="page_title">ADDRESS</p>
+          <div class="line"></div>
+
+          <img
+            src="https://img5.hkrtcdn.com/react/static/media/checkout/outline-tick.svg"
+            alt=""
+          />
+          <p class="page_title">PAYMENT</p>
+        </div>
+      </div>
+    </div>
+    <div id="outercontainer">
+      <div id="container1" style="margin-left: 100px">
+        <div id="mycart" style="display: flex">
+          <p id="cart">My Cart (4 Items)</p>
+          <img
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/header/blue-wishlist.svg"
+            id="heart"
+            alt=""
+          />
+          <p id="wishlist">My Wishlist</p>
+          <p></p>
+        </div>
+        <div id="container3"></div>
+      </div>
+      <div id="container2">
+        <div id="address" style="display: flex">
+          <img
+            id="map"
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/location-grey.svg"
+            alt=""
+          />
+          <p id="delivery">Delivery to</p>
+          <p id="bokaro">827009, BOKARO</p>
+          <p id="change">Change</p>
+        </div>
+        <div id="coupon" style="display: flex">
+          <img
+            id="couponimg"
+            src="https://static1.hkrtcdn.com/hknext/static/media/cart/discount.png"
+            alt=""
+          />
+          <p id="applycoupon">Apply Coupon</p>
+          <img
+            id="arrow"
+            src="https://static1.hkrtcdn.com/hknext/static/media/cart/arrow-right.svg"
+            alt=""
+          />
+        </div>
+        <div id="pay">
+          <p id="totalpay">Proceed to Pay</p>
+        </div>
+        <div id="amount">
+          <div id="summarydiv">
+            <p id="summary">Order Summary</p>
+          </div>
+          <div style="display: flex; justify-content: space-between">
+            <p style="margin-left: 20px">Total MRP</p>
+            <p id="mrp" style="margin-right: 20px; font-weight: bolder" >100</p>
+          </div>
+          <div style="display: flex; justify-content: space-between">
+            <p style="margin-left: 20px">Total Discounts</p>
+            <p id="totaldiscount"
+              style="
+                margin-right: 20px;
+                font-weight: bolder;
+                color: rgb(223, 70, 34);
+              "
+            >
+              -100
+            </p>
+          </div>
+          <div style="display: flex; justify-content: space-between">
+            <p style="margin-left: 20px">Loyalty Savings</p>
+            <p style="margin-right: 20px; color: rgb(70, 95, 134)">
+              Become a Member
+            </p>
+          </div>
+          <p id="save"
+            style="
+              margin-top: -15px;
+              font-size: smaller;
+              margin-left: 20px;
+              color: rgb(105, 203, 135);
+              font-weight: bolder;
+            "
+          >
+            Save extra 100
+          </p>
+          <hr />
+          <div style="display: flex; justify-content: space-between">
+            <p style="margin-left: 20px">Final Payable</p>
+            <p id="finalpayable" style="margin-right: 20px; font-weight: bolder">100</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+    var cartarray = JSON.parse(localStorage.getItem("product"));
+    console.log(cartarray);
+  function displayCart(data) {
+      document.querySelector("#container3").innerHTML = "";
+       data.map(function(elem,index){
+           var container = document.querySelector("#container3");
+           var maindiv = document.createElement("div");
+           maindiv.id = "maindiv";
+           var innerdiv = document.createElement("div");
+           innerdiv.id = "flexdiv";
+           var rightdiv = document.createElement("div");
+           rightdiv.id = "rightdiv"
+           var image = document.createElement('img');
+           image.src = elem.image;
+           image.id = "image";
+           var title = document.createElement("p");
+           title.id = "productTitle"
+           title.innerText = elem.title;
+           var pricediv = document.createElement("div");
+           pricediv.id = "priceanddiscount"
+           var price = document.createElement("p");
+           price.id = "cartprice";
+           price.innerText = `₹${elem.price}`;
+           var sprice = document.createElement("s");
+           sprice.id = "sprice";
+           sprice.innerText = `₹${elem.strPrice}`;
+           var discount = document.createElement("p");
+           discount.id = "discountoff"
+           discount.innerText = `${elem.discount}% off`
+           var plusminusdiv = document.createElement("div");
+           plusminusdiv.id = "plusminusdiv";
+           var input = document.createElement("input");
+           input.id = "input";
+           input.value = elem.quant;
+           var btn1 = document.createElement("button");
+           btn1.id = "btn1";
+           btn1.addEventListener("click", function(){
+               decrease(index);
+           })
+           var btn2 = document.createElement("button");
+           btn2.id = "btn2";
+           btn2.addEventListener("click", function(){
+               increase(index);
+           })
+           btn1.innerText = "-"
+           btn2.innerText = "+"
+           plusminusdiv.append(btn1,input,btn2);
+           pricediv.append(price,sprice,discount);
+           rightdiv.append(title,pricediv,plusminusdiv);
+           innerdiv.append(image);
+           var dustbin = document.createElement("img");
+           dustbin.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw50-I8VOda9TBM_rJv_ig5T-jPawcrW6v9Q&usqp=CAU";
+           dustbin.id = "dustbin";
+           dustbin.addEventListener("click", function(){
+            remove(index);
+           })
+           maindiv.append(innerdiv,rightdiv,dustbin);
+           container.append(maindiv);
+       })
+  }
+  displayCart(cartarray);
+
+  function decrease(index){
+      if (cartarray[index].quant >= 2){
+        cartarray[index].quant--;
+      localStorage.setItem("product", JSON.stringify(cartarray));
+      displayCart(cartarray);
+      total();
+      
+      }
+      
+  }
+  function increase(index){
+      cartarray[index].quant++;
+      localStorage.setItem("product", JSON.stringify(cartarray));
+      displayCart(cartarray);
+      total();
+  }
+  function total(){
+    var total = cartarray.reduce(function(acc,elem){
+   return acc+ (elem.price*elem.quant)
+  
+
+},0)
+var total1 = cartarray.reduce(function(acc,elem){
+   return acc+ (elem.strPrice*elem.quant)
+},0)
+
+var total3 = cartarray.reduce(function(acc,elem){
+   return acc+ (elem.pmpPrice*elem.quant)
+},0)
+
+document.querySelector("#totaldiscount").innerText = `- ₹${total1-total}`;
+document.querySelector("#finalpayable").innerText = `₹${total}`
+document.querySelector("#mrp").innerText = `₹${total1}`;
+document.querySelector("#save").innerText = `₹${total-total3}`;
+  }
+  
+  total();
+
+  function arraylength(){
+      document.querySelector("#cart").innerText = `My Cart (0${cartarray.length} Items)`
+  }
+  arraylength();
+  function remove(index){
+cartarray.splice(index,1)
+localStorage.setItem("product",JSON.stringify(cartarray));
+displayCart(cartarray);
+total();
+arraylength();
+}
+</script>
