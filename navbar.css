@@ -4,18 +4,21 @@
 #navbar{
     /* border: 1px solid; */
     /* display: flex; */
+    /* display: absolute; */
+    /* z-index: 2; */
 }
 
 .container{
     /* border: 1px solid red; */
     display: flex;
+    display: absolute;
 
 
 }
 
 .logo{
     /* border: 1px solid blue; */
-    margin-left: 10px;
+    margin-left: 40px;
 
 }
 
@@ -145,7 +148,11 @@
         display: block;
         /* border: 1px solid; */
         position: absolute;
-        z-index: 1;
+        z-index: 2;
+}
+.flex{
+    display: flex;
+    gap: 30px;
 }
 
 #hide1{
@@ -154,13 +161,16 @@
     margin-left: 300px;
     /* border: solid; */
     /* position: relative; */
+    position: absolute;
+    z-index: 1;
 }
 .item-3:hover ~ #hide1{
         display: block;
         /* border: 1px solid; */
-        position: absolute;
-        z-index: 1;
 
+}
+#hide1:hover{
+    display:block;
 }
 #hide2{
     display: none;
@@ -168,22 +178,21 @@
     margin-left: 120px; 
     line-height: 40px;
     background-color: white;
-    width: 200px;
+    width: 800px;
     padding: 20px;
     
     
+    position: absolute;
+    z-index: 2;
     /* border: solid; */
     /* position: relative; */
 }
 .nav-items-1:hover ~ #hide2{
-        display: block;
-        /* border: 1px solid; */
-        position: absolute;
-        z-index: 1;
-        
-
+        display: block; 
 }
-
+#hide2:hover{
+    display:block
+}
 
 
 .arrow{
