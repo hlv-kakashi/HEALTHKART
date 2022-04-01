@@ -136,7 +136,7 @@ return `<div class="container">
             </div>
             <div>
             Proteins<br>
-            Whey Proteins<br>
+            <a href="/Productpage_healthkart/index1.html">Whey Proteins</a><br>
             Beginners Whey Protein<br>
             Whey Protein Isolate<br>
             Raw Whey Proteins<br>

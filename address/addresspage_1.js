@@ -23,6 +23,6 @@ btn.addEventListener("click",function (event){
     console.log(arraydata);
     localStorage.setItem("datavalue",JSON.stringify(arraydata));
 
-    window.location.href = "/Payment.html";
+    window.location.href = "/login_signup_payment/debitcard.html";
 });
 
