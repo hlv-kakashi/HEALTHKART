@@ -71,28 +71,28 @@ return `<div class="container">
                         <a href="login.html"><p>My Accounts and Orders</p></a>
                       </div>
                       <div id="hide1">
-                      <div id="account">
-        <button style="border-radius: 5px; height: 30px; width: 100%; background-color: teal;">Login</button><br>
-        <button style="border-radius: 5px; height: 30px; width: 100%; margin-top: 5px;">Sign up</button>
+                                      <div id="account">
+                                     <a href="login.html"> <button style="border-radius: 5px; height: 30px; width: 100%; background-color: #31afae;">Login</button><br>
+                                     <a href="signup.html"><button style="border-radius: 5px; height: 30px; width: 100%; margin-top: 5px;">Sign up</button></a>
 
-        <div> <div id="all">
-            <div id="m">
-        
-                <div id="one">
-                    <h4>My Account</h4>
-        
-                    <a href="">Orders</a> <br>
-                    <a href="">Wishlist</a><br>
-                    <a href="">Loyalty Rewards</a>
-                </div>
-                <hr style="height: 100px; margin-top: 50px; margin-right: 20px;">
-                <div id="two">
-                    <h4>Health Profile</h4><br>
-                    <a href="">Diet Plans</a><br>
-                    <a href="">My Consultations</a><br>
-                    <a href="">Recommended Products</a>
-                </div>
-            </div>
+                                      <div> <div id="all">
+                                          <div id="m">
+                                      
+                                              <div id="one">
+                                                  <h4>My Account</h4>
+                                      
+                                                  <a href="">Orders</a> <br>
+                                                  <a href="">Wishlist</a><br>
+                                                  <a href="">Loyalty Rewards</a>
+                                              </div>
+                                              <hr style="height: 100px; margin-top: 50px; margin-right: 20px;">
+                                              <div id="two">
+                                                  <h4>Health Profile</h4><br>
+                                                  <a href="">Diet Plans</a><br>
+                                                  <a href="">My Consultations</a><br>
+                                                  <a href="">Recommended Products</a>
+                                              </div>
+                                          </div>
                 
             </div>   
     </div>
@@ -120,8 +120,10 @@ return `<div class="container">
     <div id="nav" class="navbar2">
       
         <!--   -->
-          <div class="nav-items-1">Category</div>
+          <div class="nav-items-1"><a href="product.html">Category</a></div>
             <div id="hide2">
+            <div class="flex">
+          <div>
           
             <a   href="">Sports Nutrition</a><br>
             <a   href="">Vitamins & Supplements</a><br>
@@ -131,7 +133,45 @@ return `<div class="container">
             <a   href="">Wellness</a><br>
             <a   href="">Service Program</a>
             
-          
+            </div>
+            <div>
+            Proteins<br>
+            Whey Proteins<br>
+            Beginners Whey Protein<br>
+            Whey Protein Isolate<br>
+            Raw Whey Proteins<br>
+            Plant Proteins<br>
+            Protein for Women<br>
+           
+            </div>
+            <div>
+            Gainers
+            Weight Gainers<br>
+            Mass Gainers<br>
+            Herbal Weight Gainers<br>
+            Protein Blends<br>
+            Casein Proteins<br>
+            Soy Proteins
+            </div>
+            <div>
+            Protein Foods<br>
+          Protein Bars<br>
+          Protein Cookies<br>
+          Peanut Butter<br>
+          Protein Shakes<br>
+          </div>
+          <div>
+          Pre/Post Workout<br>
+            Pre-Workout<br>
+            Creatine<br>
+            BCAAs<br>
+            Carb Blends<br>
+            Electrolytes<br>
+            Nitric Oxide<br>
+            Other Supports<br>
+            Cit<br>
+          </div>
+            </div>
             
         </div>
        
