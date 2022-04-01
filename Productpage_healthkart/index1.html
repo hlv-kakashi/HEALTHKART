@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/homepage/navbar.css">
+    <link rel="stylesheet" href="/homepage/index.css">
+    <link rel="stylesheet" href="/homepage/autoSilder.css">
+    <link rel="stylesheet" href="/homepage/all.min.css">
+    <link rel="stylesheet" href="/homepage/footer.css">
     <style>
       body {
         font-family: Roboto, sans-serif;
         background-color: rgb(248, 248, 248);
       }
-      #container {
+      #dabba {      
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         width: 65%;
         margin-left: 80px;
         margin-top: 20px;
+        margin-bottom: 20px;
       }
       #productimg {
         height: 200px;
@@ -25,7 +31,7 @@
         padding-top: 20px;
       }
       #innerdiv {
-        height: 500px;
+        height: 470px;
         width: 300px;
         background-color: white;
         border-radius: 6px;
@@ -95,9 +101,10 @@
       #btn {
         margin-left: 40px;
         margin-top: 10px;
+        padding-bottom: 10px;
         display: flex;
         width: 93px;
-        height: 35px;
+        height: 42px;
         border: 1px solid rgb(23, 143, 160);
         background-color: white;
         border-radius: 5px;
@@ -191,7 +198,8 @@
     </style>
   </head>
   <body>
-    <div style="display: flex">
+    <div id="header"></div>
+    <div style="display: flex; margin-top: 60px;">
       <p id="branch">Home / Sports Nutrition / Proteins /</p>
       <p id="whey">Whey Proteins</p>
     </div>
@@ -216,20 +224,20 @@
       />
       <h4 style="margin-left: 10px">Quick Delivery</h4>
     </div>
-    <p style="margin-left: 380px; margin-right: 170px; font-size: smaller">
+    <p style="margin-left: 380px; margin-right: 170px; font-size: smaller; margin-top: 20px;">
       For your bodybuilding goals, you can completely rely on the whey protein.
       Whey protein provides all the necessary protein and nutrients and helps in
       improving great energy levels and allows you to achieve your bodybuilding
       goals safely and effectively. It also benefits the overall health of the
       body. At
     </p>
-    <p style="color: rgb(23, 143, 160); margin-left: 380px; cursor: pointer">
+    <p style="color: rgb(23, 143, 160); margin-left: 380px; cursor: pointer; margin-top: 20px;">
       Read more
     </p>
     <hr
       style="width: 63%; margin-left: 380px; color: grey; font-weight: lighter"
     />
-    <div style="display: flex">
+    <div style="display: flex;">
       <select name="" id="sort" onchange="sorting()">
         <option value="pop">Sort by: Popularity</option>
         <option value="pltoh">Price-- Low to High</option>
@@ -246,7 +254,7 @@
     </div>
 
     <hr
-      style="width: 63%; margin-left: 380px; color: grey; font-weight: lighter"
+      style="width: 63%; margin-left: 380px; color: grey; font-weight: lighter; margin-top: 10px;"
     />
     <div style="display: flex">
       <div id="containerfilter">
@@ -355,8 +363,9 @@
           </form>
         </div>
       </div>
-      <div id="container"></div>
+      <div id="dabba"></div>
     </div>
+    <div id="laat"></div>
   </body>
 </html>
 <script src="./script.js"></script>
@@ -431,4 +440,13 @@
     array8 = array.filter((elem) => elem.price > 8000 && elem.price <= 15000);
     displayData(array8);
   }
+</script>
+<script type="module">
+ var header = document.querySelector("#header");
+ var laat = document.querySelector("#laat");
+
+ import {navbar} from "/homepage/navbar.js"
+import {footer} from "/homepage/footer.js"
+ header.innerHTML = navbar();
+ laat.innerHTML = footer();
 </script>

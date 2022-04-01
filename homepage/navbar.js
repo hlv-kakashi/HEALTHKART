@@ -72,8 +72,8 @@ return `<div class="container">
                       </div>
                       <div id="hide1">
                                       <div id="account">
-                                     <a href="login.html"> <button style="border-radius: 5px; height: 30px; width: 100%; background-color: #31afae;">Login</button><br>
-                                     <a href="signup.html"><button style="border-radius: 5px; height: 30px; width: 100%; margin-top: 5px;">Sign up</button></a>
+                                     <a href="/login_signup_payment/login.html"> <button style="border-radius: 5px; height: 30px; width: 100%; background-color: #31afae;">Login</button><br>
+                                     <a href="/login_signup_payment/signup.html"><button style="border-radius: 5px; height: 30px; width: 100%; margin-top: 5px;">Sign up</button></a>
 
                                       <div> <div id="all">
                                           <div id="m">

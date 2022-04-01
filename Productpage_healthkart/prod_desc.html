@@ -7,9 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./prod_desc.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/homepage/navbar.css">
+    <link rel="stylesheet" href="/homepage/index.css">
+    <link rel="stylesheet" href="/homepage/autoSilder.css">
+    <link rel="stylesheet" href="/homepage/all.min.css">
+    <link rel="stylesheet" href="/homepage/footer.css">
 </head>
 <body>
-    
+    <div id="header"></div>
     <div id="tank">
         <div class="div1">
             <span class="div1items">Home /</span>
@@ -254,17 +259,17 @@
                         <div class="box4">
 
                             <div id="fir" class="box4Itmes ">
-                                <p id="decrease">-</p>
-                                <p id="quantity">1</p>
-                                <p id="increase">+</p>
+                                <p style="margin-top:14px;" id="decrease">-</p>
+                                <p style="margin-top:14px;" id="quantity">1</p>
+                                <p style="margin-top:14px;" id="increase">+</p>
                             </div>
                             <div id="addTocart" class="sec">
-                                <img src="https://static1.hkrtcdn.com/hknext/static/media/pdp/add-to-cart-black.svg" alt="">
+                                <img style="margin-top:-14px;" src="https://static1.hkrtcdn.com/hknext/static/media/pdp/add-to-cart-black.svg" alt="">
                                 <p>ADD TO CART</p>
                                 
                             </div>
                             <div class="three">
-                                <img src="https://static1.hkrtcdn.com/hknext/static/media/pdp/thunder.svg" alt="">
+                                <img style="margin-top:-14px;" src="https://static1.hkrtcdn.com/hknext/static/media/pdp/thunder.svg" alt="">
                                 <p>QUICK BUY</p>
                             </div>
                         </div>
@@ -451,14 +456,14 @@
                  
         </div>
 
-        <div id="para">
-            <b>Details</b>
+        <div id="para" >
+            <p style="margin-top:50px;">Details</p>
             <hr>
-            <p>
+            <p style="margin-top: 50px;">
                 MuscleBlaze Whey Protein 4 lb Rich Milk Chocolate is an advanced protein supplement, which comes packed with the best in class raw materials.
                  It sets a higher benchmark of performance  for <b id="b1">protein supplements</b>  and maximizes workout performance.
             </p>
-            <p>
+            <p style="margin-top: 80px; margin-bottom: 80px;">
                 <b>Benefits Of MuscleBlaze Whey Protein</b><br>
                 <b>All New Whey Blend for Quick Recovery </b> - Whey isolates being the primary source of protein with 90 percent of pure 
                 protein by weight, MuscleBlaze Whey Protein Rich Milk Chocolate helps with rapid muscle gain. Packed with whey 
@@ -471,7 +476,7 @@
                 The potent BCAAs is a muscle building fuel that comes with leucine, isoleucine,
                  and valine to assist in reducing fatigue, enhance muscular strength and ensure swift muscle recovery.
             </p>
-            <p>
+            <p style="margin-top: 80px; margin-bottom: 80px;">
                <b> Enhanced Digestion with Digezyme</b> - Added DigeZyme, a multi-enzyme blend helps improve protein digestion, thereby lowering any symptoms of bloating. Improved digestion ensures that  maximum nutrients of 
                 MuscleBlaze Whey Protein Rich Milk Chocolate get absorbed in fitness enthusiasts for a speedy recovery and greater muscle synthesis. Superior Sweetener Blend - The best in class sweetener mix helps minimize calorie load safely 
                 and adheres to the most stringent of standards. This blend has Zero Added Sugar & Zero Aspartame
@@ -481,10 +486,20 @@
         
 
     </div>
+    <div id="laat"></div>
     
 </body>
 </html>
 
 <script src="./prod_desc.js">
 
+</script>
+<script type="module">
+    var header = document.querySelector("#header");
+    var laat = document.querySelector("#laat");
+   
+    import {navbar} from "/homepage/navbar.js"
+   import {footer} from "/homepage/footer.js"
+    header.innerHTML = navbar();
+    laat.innerHTML = footer();
 </script>

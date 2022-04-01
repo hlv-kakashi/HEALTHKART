@@ -415,6 +415,7 @@ h3{
 
 #addTocart{
     cursor: pointer;
+    padding-top: 15px;
 }
 
 .box3{
@@ -429,12 +430,13 @@ h3{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
+   
     
 }
 .box3 > p{
     font-size: 12px;
     padding-left: 15px;
+    padding-top: 18px;
 
 }
 .box3 > img{
@@ -491,6 +493,7 @@ h3{
     justify-content: space-evenly;
     border-radius: 6px;
     cursor: pointer;
+     padding-top: 15px;   
 
 }
 

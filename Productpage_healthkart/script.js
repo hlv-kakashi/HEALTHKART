@@ -312,7 +312,7 @@ array.push(
 console.log(array);
 
 function displayData(data) {
-    document.querySelector("#container").innerHTML = "";
+    document.querySelector("#dabba").innerHTML = "";
   data.map(function (elem) {
     let redbox = document.createElement("div");
     redbox.id = "redbox";
@@ -383,7 +383,7 @@ function displayData(data) {
     elitediv.append(eliteimg,elitetext,pmpPrice)
     pricediv.append(price,strPrice,btn);
     div.append(upperbox, vegimg, img, name,ratingdiv,pricediv,elitediv);
-    document.querySelector("#container").append(div);
+    document.querySelector("#dabba").append(div);
     div.addEventListener("click", function(){
       descriptionData(elem);
   })
