@@ -224,8 +224,10 @@
         height: 30px;
         width: 30px;
         margin-top: 20px;
-        margin-left: 40px;
+        margin-left: 240px;
+        margin-right: 40px;
         cursor: pointer;
+        
     }
   </style>
   <body>
@@ -441,7 +443,7 @@ var total3 = cartarray.reduce(function(acc,elem){
    return acc+ (elem.pmpPrice*elem.quant)
 },0)
 
-document.querySelector("#totaldiscount").innerText = `₹${total1-total}`;
+document.querySelector("#totaldiscount").innerText = `- ₹${total1-total}`;
 document.querySelector("#finalpayable").innerText = `₹${total}`
 document.querySelector("#mrp").innerText = `₹${total1}`;
 document.querySelector("#save").innerText = `₹${total-total3}`;
