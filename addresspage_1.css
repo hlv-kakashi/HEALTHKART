@@ -1,0 +1,111 @@
+/* Address page css */
+body{
+    font-family: Roboto,sans-serif;
+    /* opacity: 0.5; */
+    background-image: url(./imgonline-com-ua-blur-eZR58iWoJh.jpg);
+    /* opacity:1 */
+   
+}
+/* body>#bodyimg{
+    filter: blur(8px);
+    /* -webkit-filter: blur(8px); */
+ 
+
+/* #bodyimg { */
+    
+
+#address-form{
+    width: 450px;
+    margin: auto;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+
+    /* opacity:1; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#heading{
+    padding: 10px 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+#cross{
+    padding-right: 20px;
+    font-size: 30px;
+    font-weight: normal;
+    color: gray;
+}
+
+#head-text{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#body{
+    padding: 10px 20px;
+}
+
+.type1{
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid rgb(179, 179, 179) ;
+    font-size: 18px;
+}
+
+.type2{
+    width: 195px;
+    border: none;
+    border-bottom: 1px solid rgb(179, 179, 179) ;
+    font-size: 18px;
+}
+
+.type3{
+    width: 400px;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    border-radius: 7px;
+    height: 60px;
+    font-size: 18px;
+    margin: 20px 0px 10px;
+    cursor: pointer;
+}
+
+th,
+td {
+    width: 200px;
+}
+th{
+    text-align: left;
+    padding-top: 20px;
+}
+
+#loc{
+    color: rgb(35, 190, 190);
+}
+
+.must{
+    color: red;
+}
+/* #nav{
+    background-color: white;
+    margin-bottom: 15px;
+    height: 80px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#logo{
+    width: 200px;
+    padding-left: 200px;
+    margin-top: 15px;
+}
+#nxt{
+    width: 500px;
+    padding-left: 116px;
+} */
+
+/* Address page css ends */
