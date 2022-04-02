@@ -1,6 +1,6 @@
 let crossbtn=document.getElementById("cross");
 crossbtn.addEventListener("click",()=>{
-    window.location.href="/homepage/index.html"
+    window.location.href="../index.html"
 });
 
 
@@ -38,7 +38,7 @@ function login(e){
         }
     }
     if(flag===false){
-        window.location.href = "/homepage/index.html";
+        window.location.href = "../index.html";
     }else{
         alert("The Number you have enetered is not Registered.");
     }
